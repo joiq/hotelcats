@@ -171,28 +171,35 @@ a {
   bottom: 7px;
 }
 
-.reserve__btn:hover {
+.btn-orange {
   background-color: #FF7236;
   color: #ffffff;
 }
 
-.reserve__btn:hover::after {
+.btn-orange::after {
   background: url(../img/decor/paw1.svg) no-repeat center;
 }
 
 /* Rooms */
+.section__rooms {
+  background: url(../img/rooms/fish.png) no-repeat 180px 130px;
+}
 
 .room__item {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  padding: 0 70px;
+  padding-left: 70px;
+  margin-bottom: 50px;
+  min-width: 0;
+  position: relative;
+  outline: none;
 }
 
 .room__description {
   background-color: #fff;
   box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
   border-radius: 8px;
-  width: 40%;
+  width: 100%;
   height: 270px;
   padding: 40px 90px;
   z-index: 100;
@@ -202,9 +209,11 @@ a {
 
 .room__description-title {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .room__description-list {
+  width: 100%;
   margin-bottom: 25px;
   margin-left: 20px;
 }
