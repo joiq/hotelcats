@@ -1,0 +1,219 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #1A212F;
+  background-color: #FFFEFD;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.nav__menu-item {
+  margin-right: 25px;
+  list-style: none;
+  position: relative;
+  transition: 0.15s linear;
+}
+
+.nav__menu-item:hover::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #FF7236;
+  position: absolute;
+}
+
+.nav__menu-item:hover {
+  color: #FF7236;
+}
+
+/* Intro */
+
+.intro {
+  height: 500px;
+  max-width: 100%;
+  background: url('../img/intro/intro__bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+}
+
+.intro__city {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.intro__title {
+  font-size: 62px;
+  line-height: 73px;
+  margin-bottom: 5px;
+}
+
+.intro__desc {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Section */
+
+.section {
+  padding: 120px 0 0 0;
+}
+
+.section__title {
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Advantages */
+
+.section__advantage {
+  background: url(../img/advantages/paw.png) no-repeat top right;
+}
+
+.advantage__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.advantage__item {
+  width: 30%;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+}
+
+.advantage__title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 25px 0 5px;
+}
+
+.advantage__text {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+/* Buttons */
+
+.reserve__btn {
+  width: 200px;
+  height: 50px;
+  padding-left: 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s linear;
+}
+
+.reserve__btn::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../img/decor/paw.svg) no-repeat center;
+  position: absolute;
+  right: 5px;
+  bottom: 7px;
+}
+
+.reserve__btn:hover {
+  background-color: #FF7236;
+  color: #ffffff;
+}
+
+.reserve__btn:hover::after {
+  background: url(../img/decor/paw1.svg) no-repeat center;
+}
+
+/* Rooms */
+
+.room__item {
+  display: flex;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.room__description {
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  width: 40%;
+  height: 270px;
+  padding: 40px 90px;
+  z-index: 100;
+  position: relative;
+  right: 70px;
+}
+
+.room__description-title {
+  margin-bottom: 20px;
+}
+
+.room__description-list {
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.room__description-list .list__item {
+  margin-bottom: 5px;
+  list-style-image: url(../img/decor/circle.jpg);
+}
+
+.room__description-list .list__item:last-child {
+  margin-bottom: 0px;
+}
