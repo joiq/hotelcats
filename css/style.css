@@ -63,6 +63,35 @@ a {
   color: #FF7236;
 }
 
+.nav__toggle {
+  outline: none;
+  border: none;
+  display: none;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #1A212F;
+}
+
+.nav__toggle::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #1A212F;
+}
+
+.nav__toggle::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #1A212F;
+}
 /* Intro */
 
 .intro {
@@ -231,6 +260,7 @@ a {
 .room__description-list .list__item {
   margin-bottom: 5px;
   list-style-image: url(../img/decor/circle.jpg);
+  border-radius: 100%;
 }
 
 .room__description-list .list__item:last-child {
@@ -347,3 +377,158 @@ a {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 1192px) {
+  /* HEADER */
+  .nav {
+    padding: 10px;
+  }
+
+  /* INTRO */
+  .intro__inner {
+    padding: 10px;
+  }
+  
+  /* ROOMS */
+
+}
+
+@media (max-width: 991px) {
+  /* HEADER */
+
+  /* INTRO */
+  .intro {
+    height: 350px;
+  }
+
+  .intro__inner {
+    height: 350px;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 60px 0 0 0;
+  }
+
+  .section__title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  /* ROOMS */
+  
+}
+
+@media (max-width: 870px) {
+  /* HEADER */
+  .nav__menu-item {
+    font-size: 14px;
+  }
+
+  /* INTRO */
+  .intro__title {
+    font-size: 45px;
+    margin-bottom: 0;
+  }
+  
+  .intro__desc {
+    font-size: 15px;
+  }
+
+  /* ADVANTAGES */
+  .advantage__item {
+    width: 45%;
+    
+  }
+
+  .advantage__img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .advantage__title {
+    font-size: 18px;
+  }
+
+  .advantage__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* HEADER */
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  /* INTRO */
+  .intro {
+    height: 320px;
+  }
+
+  .intro__inner {
+    height: 275px;
+  }
+}
+
+@media (max-width: 485px) {
+  /* HEADER */
+  
+
+  /* INTRO */
+  .intro__title {
+    font-size: 30px;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+  
+  .intro__desc {
+    font-size: 12px;
+  }
+
+  .intro__city {
+    font-size: 12px;
+  }
+
+  /* BUTTONS */
+  .reserve__btn {
+    width: 160px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 12px;
+  }
+
+  .reserve__btn::after {
+    bottom: 2px;
+  }
+
+  /* ADVANTAGES */
+  .advantage__item {
+    width: 60%;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 20px 0 0 0;
+  }
+  
+  .section__title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 351px) {
+  /* INTRO */
+  .intro {
+    background-position: -235px 0;
+  }
+
+  /* ADVANTAGES */
+  .advantage__item {
+    width: 90%;
+  }
+}
