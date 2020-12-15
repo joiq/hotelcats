@@ -160,6 +160,11 @@ a {
   transition: 0.2s linear;
 }
 
+.reserve__btn:hover {
+  background: #FF7236;
+  color: #ffffff;
+}
+
 .reserve__btn::after {
   content: '';
   display: block;
@@ -181,8 +186,9 @@ a {
 }
 
 /* Rooms */
+
 .section__rooms {
-  background: url(../img/rooms/fish.png) no-repeat 180px 130px;
+  background: url(../img/rooms/fish.png) no-repeat 270px 130px;
 }
 
 .room__item {
@@ -193,6 +199,10 @@ a {
   min-width: 0;
   position: relative;
   outline: none;
+}
+
+.room__img {
+  border-radius: 10px;
 }
 
 .room__description {
@@ -226,3 +236,114 @@ a {
 .room__description-list .list__item:last-child {
   margin-bottom: 0px;
 }
+
+/* Reviews */
+
+.section__reviews {
+  background: url(../img/reviews/paw.png) no-repeat top right;
+}
+
+.reviews__item {
+  padding: 35px 35px 35px 70px;
+  margin-bottom: 50px;
+  margin-right: 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  outline: none;
+}
+
+.reviews__item-text {
+  margin-bottom: 20px;
+  line-height: 140%;
+  font-weight: 500;
+  position: relative;
+}
+
+.reviews__item-text::before {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 30px;
+  background: url(../img/decor/quotes.png) no-repeat;
+  position: absolute;
+  top: 0px;
+  left: -35px;
+}
+
+.reviews__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__item-author,
+.reviews__item-date {
+  font-size: 14px;
+  font-style: normal;
+  color: #848484;
+}
+
+/* Contacts */
+.section__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts {
+  background-color: #FAC663;
+  display: flex;
+  justify-content: center;
+
+  padding: 60px 110px 60px 190px;
+  width: 570px;
+}
+
+.contacts__inner .section__title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.contacts__list-item {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.contacts__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+.contacts__social-icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.section__contacts-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+.footer__copyright .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+  font-size: 12px;
+  color: #8F8F8F;
+}
+
+.footer__hr {
+  background-color: #EFEFEF;
+  height: 1px;
+  border: none;
+}
+
+/* MEDIA QUERIES */

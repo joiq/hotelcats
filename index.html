@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Rubik:wght@500;700&display=swap"
         rel="stylesheet">
@@ -15,6 +15,7 @@
 
 <body>
 
+    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -46,7 +47,9 @@
             </nav>
         </div>
     </header>
+    <!-- /.HEADER -->
 
+    <!-- INTRO -->
     <section class="intro">
         <div class="container">
             <div class="intro__inner">
@@ -59,7 +62,9 @@
             </div>
         </div>
     </section>
+    <!-- /.INTRO -->
 
+    <!-- ADVANTAGE -->
     <section class="section section__advantage">
         <div class="container">
             <div class="section__title">Почему мы?</div>
@@ -115,7 +120,9 @@
             </div>
         </div>
     </section>
+    <!-- /.ADVANTAGE -->
 
+    <!-- ROOMS -->
     <section class="section section__rooms">
         <div class="container">
             <h3 class="section__title">Номера</h3>
@@ -165,6 +172,143 @@
             </div>
         </div>
     </section>
+    <!-- /.ROOMS -->
+
+    <!-- REVIEWS -->
+    <section class="section section__reviews">
+        <div class="container">
+            <h3 class="section__title">Отзывы</h3>
+            <div class="reviews__inner">
+                <div class="reviews__item">
+                    <blockquote class="reviews__item-text">
+                        Первый раз пришлось оставить нашего котика
+                        в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца,
+                        рассказывала, как он себя чувствует.
+                        И мы и котик остались очень довольны!
+                    </blockquote>
+                    <div class="reviews__item-wrapper">
+                        <cite class="reviews__item-author">Валерия Гришаева</cite>
+                        <time class="reviews__item-date" datetime="15 ноября, 2019">15 ноября, 2019</time>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <blockquote class="reviews__item-text">
+                        Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда
+                        уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем
+                        рекомендую! Будем обращаться еще.
+                    </blockquote>
+                    <div class="reviews__item-wrapper">
+                        <cite class="reviews__item-author">Екатерина Минаева</cite>
+                        <time class="reviews__item-date" datetime="10 октября, 2019">10 октября, 2019</time>
+                    </div>
+                </div>
+                <div class="reviews__item">
+                    <blockquote class="reviews__item-text">
+                        Мой кот — настоящая привереда, угодить ему сложно. У меня были особые требования к уходу за ним,
+                        и “Котейка” отлично справились. Я часто наблюдал по видео за питомцем со своего телефона, это
+                        очень удобно.
+                    </blockquote>
+                    <div class="reviews__item-wrapper">
+                        <cite class="reviews__item-author">Павел Нечаев</cite>
+                        <time class="reviews__item-date" datetime="15 ноября, 2019">15 ноября, 2019</time>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.REVIEWS -->
+
+    <!-- CONTACTS -->
+    <section class="section section__contacts">
+        <div class="contacts">
+            <div class="contacts__inner">
+                <h3 class="section__title">Как нас найти</h3>
+                <ul class="contacts__list">
+                    <li class="contacts__list-item">
+                        <h4 class="contacts__title">Адрес</h4>
+                        <p>Санкт-Петербург,
+                            ул Большая Конюшенная, д 19
+                        </p>
+                    </li>
+                    <li class="contacts__list-item">
+                        <h4 class="contacts__title">Режим работы</h4>
+                        <p>Ежедневно, с 9:00 до 20:00
+                        </p>
+                    </li>
+                    <li class="contacts__list-item">
+                        <h4 class="contacts__title">Телефон</h4>
+                        <p>8 (800) 333-55-99
+                        </p>
+                    </li>
+                    <li class="contacts__list-item">
+                        <h4 class="contacts__title">E-mail</h4>
+                        <p>info@cat-hotel.ru
+                        </p>
+                    </li>
+                    <li class="contacts__list-item">
+                        <h4 class="contacts__title">Социальные сети</h4>
+                        <a class="contacts__social-icon" href="#">
+                            <img src="img/social/facebook.svg" alt="">
+                        </a>
+                        <a class="contacts__social-icon" href="#">
+                            <img src="img/social/instagram.svg" alt="">
+                        </a>
+                        <a class="contacts__social-icon" href="#">
+                            <img src="img/social/vk-social-logotype.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <iframe class="section__contacts-map"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4cea80d68d044bc4b5eaddca028a547c6ae9ffe3fbf88392c67e71c7b7db46ec&amp;source=constructor"
+            height="580" frameborder="0"></iframe>
+    </section>
+    <!-- /.CONTACTS -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="img/nav/logo.svg" alt="logotype">
+                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <a class="nav__link" href='#'>
+                            Почему мы?
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a class="nav__link" href='#'>
+                            Номера
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a class="nav__link" href='#'>
+                            Отзывы
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a class="nav__link" href='#'>
+                            Как нас найти
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <hr class="footer__hr">
+    <div class="footer__copyright">
+        <div class="container">
+            <span>
+                © 2019 Все права защищены
+            </span>
+            <span>
+                Политика конфиденциальности
+            </span>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
