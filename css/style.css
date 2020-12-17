@@ -67,6 +67,7 @@ a {
   outline: none;
   border: none;
   display: none;
+  background-color: #FFFEFD;
 }
 
 .nav__toggle span {
@@ -388,8 +389,15 @@ a {
     padding: 10px;
   }
   
-  /* ROOMS */
+  /* REVIEWS */
+  .reviews__item {
+    margin: 0 30px 50px 30px;
+  }
 
+  /* FOOTER */
+  .footer__copyright .container {
+    padding: 20px 20px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -436,8 +444,7 @@ a {
 
   /* ADVANTAGES */
   .advantage__item {
-    width: 45%;
-    
+    width: 40%;
   }
 
   .advantage__img {
@@ -451,6 +458,16 @@ a {
 
   .advantage__text {
     font-size: 14px;
+  }
+
+  /* ROOMS */
+  .room__description {
+    right: 310px;
+  }
+
+  /* CONTACTS */
+  .contacts {
+    padding: 30px 50px 30px 70px;
   }
 }
 
@@ -471,6 +488,39 @@ a {
 
   .intro__inner {
     height: 275px;
+  }
+
+  /* ROOMS */
+  .room__img {
+    display: none !important;
+  }
+
+  .section__rooms {
+    background-position: 0 0;
+  }
+
+  .room__item {
+    padding: 0 70px;
+  }
+
+  .room__description {
+    position: static;
+  }
+
+  /* CONTACTS */
+  .contacts {
+    padding: 15px 10px 15px 20px;
+  }
+
+  /* FOOTER */
+  .footer .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .advantage__item {
+    width: 80%;
   }
 }
 
@@ -505,11 +555,6 @@ a {
     bottom: 2px;
   }
 
-  /* ADVANTAGES */
-  .advantage__item {
-    width: 60%;
-  }
-
   /* SECTION */
   .section {
     padding: 20px 0 0 0;
@@ -518,6 +563,61 @@ a {
   .section__title {
     font-size: 22px;
     margin-bottom: 10px;
+  }
+
+  /* ROOMS */
+  .room__item {
+    padding: 0 10px;
+  }
+
+  /* SLIDER */
+  .slick-arrow {
+    right: 10px;
+  }
+
+  .slick-prev {
+    right: 60px;
+  }
+
+  /* REVIEWS */
+  .reviews__item-text {
+    font-size: 14px;
+  }
+
+  .reviews__item-author,
+  .reviews__item-date {
+    font-size: 12px;
+  }
+
+  /* CONTACTS */
+  .contacts {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .section__contacts {
+    display: block;
+  }
+
+  .contacts__inner .section__title {
+    margin-bottom: 5px;
+  }
+
+  .contacts__title {
+    margin-bottom: 0;
+  }
+
+  .contacts__list-item {
+    margin-bottom: 5px;
+  }
+
+  .section__contacts-map {
+    height: 300px;
+    width: 100%;
+  }
+
+  .contacts__list {
+    font-size: 12px;
   }
 }
 
@@ -530,5 +630,10 @@ a {
   /* ADVANTAGES */
   .advantage__item {
     width: 90%;
+  }
+
+  /* ROOMS */
+  .room__description-list {
+    font-size: 14px;
   }
 }

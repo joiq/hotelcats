@@ -9,7 +9,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('.reviews__inner').slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: (document.querySelector('.reviews__inner').offsetWidth <= 600) ? 1 : 2,
     slidesToScroll: 1,
     dots: true,
     autoplay: true,
