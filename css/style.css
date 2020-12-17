@@ -34,6 +34,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  position: relative;
 }
 
 .nav__menu {
@@ -63,11 +64,21 @@ a {
   color: #FF7236;
 }
 
+.nav__menu-item.active::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #FF7236;
+  position: absolute;
+}
+
 .nav__toggle {
   outline: none;
   border: none;
   display: none;
-  background-color: #FFFEFD;
+  background-color: transparent;
+  z-index: 100;
 }
 
 .nav__toggle span {
@@ -93,6 +104,11 @@ a {
   height: 3px;
   background-color: #1A212F;
 }
+
+.nav__menu.active {
+  display: block;
+}
+
 /* Intro */
 
 .intro {
@@ -473,8 +489,30 @@ a {
 
 @media (max-width: 600px) {
   /* HEADER */
+
+  .logo img {
+    width: 45px;
+  }
+
+  .nav {
+    position: fixed;
+    z-index: 1000;
+    background-color: #FCA652;
+    width: 100%;
+  }
+
   .nav__menu {
     display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FCA652;
+    padding: 10px;
+  }
+
+  .nav__menu-item {
+    margin-bottom: 10px;
   }
 
   .nav__toggle {
@@ -488,6 +526,10 @@ a {
 
   .intro__inner {
     height: 275px;
+  }
+
+  .intro__city {
+    margin-top: 50px;
   }
 
   /* ROOMS */
@@ -541,6 +583,7 @@ a {
 
   .intro__city {
     font-size: 12px;
+    margin-top: 0;
   }
 
   /* BUTTONS */
@@ -637,3 +680,38 @@ a {
     font-size: 14px;
   }
 }
+
+/*  */
+#back-top {
+  position: fixed;
+  bottom: 0px;
+  padding: 0px;
+  left: 50%;  
+  margin-left: 500px;
+  z-index:99991;
+  }
+#back-top a{
+  width: 77px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  display:block;
+  text-decoration:none;
+  -webkit-transition: all linear 0.2s; 
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  text-align: center;
+   
+  }
+
+#back-top a:hover{
+  height: 70px;
+  background: #663399;
+  -webkit-transition: all linear 0.2s; 
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  -o-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  color: #fff;
+  }
