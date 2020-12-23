@@ -206,7 +206,7 @@ a {
   transition: 0.2s linear;
 }
 
-.reserve__btn:hover {
+.reserve__btn:not(.modal-btn):hover {
   background: #FF7236;
   color: #ffffff;
 }
@@ -323,14 +323,14 @@ a {
   justify-content: space-between;
 }
 
-.reviews__item-author,
-.reviews__item-date {
+.reviews__item-author, .reviews__item-date {
   font-size: 14px;
   font-style: normal;
   color: #848484;
 }
 
 /* Contacts */
+
 .section__contacts {
   display: flex;
   justify-content: space-between;
@@ -340,7 +340,6 @@ a {
   background-color: #FAC663;
   display: flex;
   justify-content: center;
-
   padding: 60px 110px 60px 190px;
   width: 570px;
 }
@@ -377,11 +376,11 @@ a {
 }
 
 /* Footer */
+
 .footer__copyright .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 20px 0;
   font-size: 12px;
   color: #8F8F8F;
@@ -393,23 +392,126 @@ a {
   border: none;
 }
 
+/* MODAL */
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  background-color: rgba(255, 254, 253, .8);
+  backdrop-filter: blur(8px);
+}
+
+.modal__dialog {
+  background-color: #FCA652;
+  max-width: 570px;
+  height: auto;
+  margin: 150px auto;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 10px;
+}
+
+.modal__content {
+  width: 100%;
+  padding: 70px;
+  position: relative;
+}
+
+.modal__content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__title {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.modal__content input {
+  width: 100%;
+  height: 50px;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid #D7D7D7;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+}
+
+.modal__content input::placeholder {
+  color: #1A212F;
+}
+
+.input__data-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input__data-wrapper input {
+  width: 130px;
+  margin: 0 10px;
+  color: #B5B5B5;
+}
+
+.input__data-wrapper input:last-child {
+  margin-right: 0;
+}
+
+.modal.show {
+  display: block;
+}
+
+.reserve__btn.modal-btn {
+  background-color: #FF7236;
+  color: #FCA652;
+  margin-top: 50px;
+}
+
+.reserve__btn.modal-btn::after {
+  background-image: url(../img/form/paw.svg);
+}
+
+.modal__close {
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
 /* MEDIA QUERIES */
+
 @media (max-width: 1192px) {
   /* HEADER */
   .nav {
     padding: 10px;
   }
-
   /* INTRO */
   .intro__inner {
     padding: 10px;
   }
-  
   /* REVIEWS */
   .reviews__item {
     margin: 0 30px 50px 30px;
   }
-
   /* FOOTER */
   .footer__copyright .container {
     padding: 20px 20px;
@@ -418,28 +520,22 @@ a {
 
 @media (max-width: 991px) {
   /* HEADER */
-
   /* INTRO */
   .intro {
     height: 350px;
   }
-
   .intro__inner {
     height: 350px;
   }
-
   /* SECTION */
   .section {
     padding: 60px 0 0 0;
   }
-
   .section__title {
     font-size: 26px;
     margin-bottom: 30px;
   }
-
   /* ROOMS */
-  
 }
 
 @media (max-width: 870px) {
@@ -447,40 +543,32 @@ a {
   .nav__menu-item {
     font-size: 14px;
   }
-
   /* INTRO */
   .intro__title {
     font-size: 45px;
     margin-bottom: 0;
   }
-  
   .intro__desc {
     font-size: 15px;
   }
-
   /* ADVANTAGES */
   .advantage__item {
     width: 40%;
   }
-
   .advantage__img {
     width: 60px;
     height: 60px;
   }
-
   .advantage__title {
     font-size: 18px;
   }
-
   .advantage__text {
     font-size: 14px;
   }
-
   /* ROOMS */
   .room__description {
     right: 310px;
   }
-
   /* CONTACTS */
   .contacts {
     padding: 30px 50px 30px 70px;
@@ -489,18 +577,15 @@ a {
 
 @media (max-width: 600px) {
   /* HEADER */
-
   .logo img {
     width: 45px;
   }
-
   .nav {
     position: fixed;
     z-index: 1000;
     background-color: #FCA652;
     width: 100%;
   }
-
   .nav__menu {
     display: none;
     width: 100%;
@@ -510,53 +595,78 @@ a {
     background-color: #FCA652;
     padding: 10px;
   }
-
   .nav__menu-item {
     margin-bottom: 10px;
   }
-
   .nav__toggle {
     display: block;
   }
-
   /* INTRO */
   .intro {
     height: 320px;
   }
-
   .intro__inner {
     height: 275px;
   }
-
   .intro__city {
     margin-top: 50px;
   }
-
   /* ROOMS */
   .room__img {
     display: none !important;
   }
-
   .section__rooms {
     background-position: 0 0;
   }
-
   .room__item {
     padding: 0 70px;
   }
-
   .room__description {
     position: static;
   }
-
   /* CONTACTS */
   .contacts {
     padding: 15px 10px 15px 20px;
   }
-
   /* FOOTER */
   .footer .nav {
     display: none;
+  }
+
+  /* MODAl */
+  .modal__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .modal__dialog {
+    max-width: 400px;
+  }
+
+  .modal__content {
+    padding-top: 20px;
+  }
+
+  .modal__close {
+    top: 0;
+    right: 20px;
+  }
+
+  .modal__content input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .input__data-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .input__data-wrapper input {
+    margin-bottom: 10px;
+  }
+
+  .reserve__btn.modal-btn {
+    width: 180px;
   }
 }
 
@@ -568,24 +678,19 @@ a {
 
 @media (max-width: 485px) {
   /* HEADER */
-  
-
   /* INTRO */
   .intro__title {
     font-size: 30px;
     line-height: normal;
     margin-bottom: 0;
   }
-  
   .intro__desc {
     font-size: 12px;
   }
-
   .intro__city {
     font-size: 12px;
     margin-top: 0;
   }
-
   /* BUTTONS */
   .reserve__btn {
     width: 160px;
@@ -593,72 +698,56 @@ a {
     padding-left: 15px;
     font-size: 12px;
   }
-
   .reserve__btn::after {
     bottom: 2px;
   }
-
   /* SECTION */
   .section {
     padding: 20px 0 0 0;
   }
-  
   .section__title {
     font-size: 22px;
     margin-bottom: 10px;
   }
-
   /* ROOMS */
   .room__item {
     padding: 0 10px;
   }
-
   /* SLIDER */
   .slick-arrow {
     right: 10px;
   }
-
   .slick-prev {
     right: 60px;
   }
-
   /* REVIEWS */
   .reviews__item-text {
     font-size: 14px;
   }
-
-  .reviews__item-author,
-  .reviews__item-date {
+  .reviews__item-author, .reviews__item-date {
     font-size: 12px;
   }
-
   /* CONTACTS */
   .contacts {
     padding: 10px 0;
     width: 100%;
   }
-
   .section__contacts {
     display: block;
   }
-
   .contacts__inner .section__title {
     margin-bottom: 5px;
   }
-
   .contacts__title {
     margin-bottom: 0;
   }
-
   .contacts__list-item {
     margin-bottom: 5px;
   }
-
   .section__contacts-map {
     height: 300px;
     width: 100%;
   }
-
   .contacts__list {
     font-size: 12px;
   }
@@ -669,12 +758,10 @@ a {
   .intro {
     background-position: -235px 0;
   }
-
   /* ADVANTAGES */
   .advantage__item {
     width: 90%;
   }
-
   /* ROOMS */
   .room__description-list {
     font-size: 14px;
@@ -682,36 +769,38 @@ a {
 }
 
 /*  */
+
 #back-top {
   position: fixed;
   bottom: 0px;
   padding: 0px;
-  left: 50%;  
+  left: 50%;
   margin-left: 500px;
-  z-index:99991;
-  }
-#back-top a{
+  z-index: 99991;
+}
+
+#back-top a {
   width: 77px;
   height: 30px;
   background: rgba(0, 0, 0, 0.25);
-  display:block;
-  text-decoration:none;
-  -webkit-transition: all linear 0.2s; 
+  display: block;
+  text-decoration: none;
+  -webkit-transition: all linear 0.2s;
   -moz-transition: all linear 0.2s;
   -ms-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
   text-align: center;
-   
-  }
+}
 
-#back-top a:hover{
+#back-top a:hover {
   height: 70px;
   background: #663399;
-  -webkit-transition: all linear 0.2s; 
+  -webkit-transition: all linear 0.2s;
   -moz-transition: all linear 0.2s;
   -ms-transition: all linear 0.2s;
   -o-transition: all linear 0.2s;
   transition: all linear 0.2s;
   color: #fff;
-  }
+}
+

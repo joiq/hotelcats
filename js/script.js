@@ -47,3 +47,36 @@ $(document).ready(function () {
 
   });
 })(jQuery);  
+
+// modal
+const reserveBtn = document.querySelectorAll('.reserve__btn');
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
+
+function openModal() {
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modal.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+reserveBtn.forEach(item => {
+  item.addEventListener('click', openModal);
+});
+
+modalClose.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Escape' && modal.classList.contains('show')) {
+    closeModal();
+  }
+});
